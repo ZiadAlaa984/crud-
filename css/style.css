@@ -1,0 +1,97 @@
+:root {
+    --bg-selection-dark: forestgreen;
+    --bg-body-dark: #1c2532;
+    --h1-color-dark: rgb(233, 199, 137);
+    --bs-table-bg: #212529;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-body-dark);
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    width: fit-content;
+
+    color: var(--h1-color-dark);
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+    z-index: -9999;
+    background-color: #66a755;
+    transition: all 400ms;
+}
+
+h1:hover::after {
+    height: 70%;
+}
+
+::selection {
+    background-color: var(--bg-selection-dark);
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    color: #66a755;
+}
+
+form {
+    border-top: 2px dotted #fff;
+    border-bottom: 2px dotted #fff;
+}
+
+form,
+input[type='search'] {
+    color: white;
+    font-family: "PT Sans Caption", sans-serif;
+
+}
+
+input[type='search']::placeholder {
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: #d1512d;
+    transition: all 400ms;
+    color: white;
+}
+
+.search_div {
+    width: 75%;
+}
+
+.btn-submit:hover {
+    background-color: #bb4120;
+}
+
+table thead {
+    border-bottom: solid 1px white;
+}
+
+table tr td {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--bs-table-bg);
+}
+
+@media screen and (max-width:340px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .search_div {
+        width: 100%;
+    }
+}

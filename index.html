@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="Bookmark your favorite sites " name="description">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" id="style">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+</head>
+
+<body>
+    <div class="container mx-auto py-5 ">
+        <h1 class="text-center mx-auto      text-capitalize position-relative  ">Bookmarker</h1>
+        <form class=" border-black mb-3 mt-5    border-white">
+            <h2 class="text-center liner-gradient pt-3  "><i class="fa-solid fa-bookmark"></i> Bookmark your favorite
+                sites <i class="fa-solid fa-bookmark"></i></h2>
+            <div class="mb-3"><label class="mt-2 form-label fw-bolder" for="site_Name"><i
+                        class="fa-solid fa-book-bookmark"></i>
+                    Site Name</label> <input oninput="validation(nameRegex,inputName)" aria-describedby="helpId"
+                    class="form-control" id="site_Name" name="" placeholder="Site Name">
+                <p class="text-danger d-none pt-1 text-wrong">Site name must contain at least 3 characters</p>
+            </div>
+            <div class="mb-3"><label class="mt-2 form-label fw-bolder" for="Site Url"><i <i
+                        class="fa-solid fa-link"></i>
+                    Site Url</label> <input oninput="validation(urlRegex,inputUrl)" aria-describedby="helpId"
+                    class="form-control" id="Site_Url" name="" placeholder="Site Url">
+                <p class="text-danger d-none pt-1 text-wrong">Site name must contain at least 3 characters</p>
+            </div>
+            <div class="button mb-3  d-flex  justify-content-center  align-items-center ">
+                <button type="button" class="btn btn-submit px-5 py-2" id="btn">Submit</button>
+            </div>
+        </form>
+        <div class="my-3 search_div  mx-auto">
+            <input type="search" oninput="searchSite()" aria-describedby="helpId" class="form-control" id="search"
+                name="" placeholder="search">
+        </div>
+        <table id="table" class=" text-white w-100">
+            <thead>
+                <td>Index</td>
+                <td>Name</td>
+                <td>Visit</td>
+                <td>Delete</td>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
